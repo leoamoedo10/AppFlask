@@ -6,7 +6,7 @@ from upMongo import upload_to_mongo
 UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = set(['csv'])
 
-#inciando a aplicação web
+#inciando a aplicação web jbd,a\jbsfk\fsbf,zsd
 app = Flask(__name__, template_folder='template')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = 'qwerty123!@#'
