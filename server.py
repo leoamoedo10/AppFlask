@@ -11,7 +11,7 @@ app = Flask(__name__, template_folder='template')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = 'qwerty123!@#'
 
-#Identificar tipo de arquivo
+#Identificar tipo de arquivo teste
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
