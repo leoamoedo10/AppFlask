@@ -6,7 +6,6 @@ from upMongo import upload_to_mongo
 UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = set(['csv'])
 
-#inciando a aplicação web
 app = Flask(__name__, template_folder='template')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = 'qwerty123!@#'
@@ -15,7 +14,6 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-#Processo de envio de arquivo
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
