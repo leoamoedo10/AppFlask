@@ -17,13 +17,15 @@
     <script src="node_modules/popper.js/dist/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-    <h1>Selecionar Arquivo</h1>
-    <div class="w-50 p-3 bg-secondary text-white">
-    <form action="/" method="POST" enctype=multipart/form-data>
-        <input type="file" name='file' enctype=multipart/form-data>
-        <input type=submit value=Enviar class="btn btn-primary">
+    <div class="jumbotron">
+        <h1 class="display-4">Importador de Arquivo</h1>
+        <hr class="my-3">
+        <form action="/" method="POST" enctype=multipart/form-data>
+            <input type="file" name='file' enctype=multipart/form-data><br>
+            <input type=submit class="btn btn-primary">
+        </form>
     </div>
-    </form>
+
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul class=flashes>
@@ -33,5 +35,6 @@
             </ul>
         {% endif %}
     {% endwith %}
+
 </body>
 </html>
